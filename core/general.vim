@@ -1,6 +1,6 @@
 
 "General settins{{{
-set mouse=nv                 " Disable mouse in command-line mode
+"set mouse=nv                 " Disable mouse in command-line mode
 set report=0                 " Don't report on line changes
 set errorbells               " Trigger bell on error
 set visualbell               " Use visual bell instead of beeping
@@ -212,14 +212,14 @@ endif
 " Editor UI {{{
 set termguicolors       " Enable true color
 set number              " Show number
-set relativenumber      " Show relative number
+"set relativenumber      " Show relative number
 set noshowmode          " Don't show mode on bottom
 set noruler             " Disable default status ruler
 set shortmess=aFc
 set scrolloff=2         " Keep at least 2 lines above/below
 "set fillchars+=vert:\|  " add a bar for vertical splits
 set fcs=eob:\           " hide ~ tila
-set list
+"set list
 set listchars=tab:»·,nbsp:+,trail:·,extends:→,precedes:←
 
 set showmatch           " Jump to matching bracket
@@ -236,7 +236,7 @@ set helpheight=12       " Minimum help window height
 set previewheight=12    " Completion preview height
 
 set showcmd             " Show command in status line
-set cmdheight=2         " Height of the command line
+"set cmdheight=2         " Height of the command line
 set cmdwinheight=5      " Command-line lines
 set noequalalways       " Don't resize windows on split or close
 set laststatus=2        " Always show a status line
@@ -249,11 +249,11 @@ if has('folding') && has('vim_starting')
 	set foldlevelstart=99
 endif
 
-if has('nvim-0.4')
-	set signcolumn=yes:1
-else
-	set signcolumn=yes           " Always show signs column
-endif
+"if has('nvim-0.4')
+"	set signcolumn=yes:1
+"else
+"	set signcolumn=yes           " Always show signs column
+"endif
 
 if has('conceal') && v:version >= 703
 	" For snippet_complete marker

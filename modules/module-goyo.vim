@@ -15,7 +15,6 @@ function! s:goyo_enter()
 	endif
 
 	" Activate Limelight
-	let g:loaded_spaceline=0
 	Limelight
 endfunction
 
@@ -34,7 +33,6 @@ function! s:goyo_leave()
 	endif
 
 	" De-activate Limelight
-	let g:loaded_spaceline =1
 	Limelight!
 endfunction
 " }}}

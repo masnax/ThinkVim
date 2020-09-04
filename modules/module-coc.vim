@@ -34,8 +34,6 @@ let g:coc_global_extensions =[
     \ 'coc-json',
     \ 'coc-python',
     \ 'coc-imselect',
-    \ 'coc-highlight',
-    \ 'coc-git',
     \ 'coc-emoji',
     \ 'coc-project',
     \ 'coc-lists',
@@ -46,9 +44,12 @@ let g:coc_global_extensions =[
     \ 'coc-yank',
     \ 'coc-explorer',
     \ 'coc-actions',
-    \'coc-rust-analyzer'
+    \ 'coc-rust-analyzer',
+    \ 'coc-rls'
     \]
 
+"    \ 'coc-git',
+"    \ 'coc-highlight',
 augroup MyAutoCmd
   autocmd!
   " Setup formatexpr specified filetype(s).

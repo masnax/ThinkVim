@@ -17,8 +17,8 @@ endfunction
 function! s:StopHL()
 	if ! v:hlsearch || mode() !=? 'n'
 		return
-	else
-		silent call feedkeys("\<Plug>(StopHL)", 'm')
+	"else
+	"	silent call feedkeys("\<Plug>(StopHL)", 'm')
 	endif
 endfunction
 

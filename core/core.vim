@@ -27,7 +27,7 @@ let g:loaded_vimball = 1
 let g:loaded_vimballPlugin = 1
 
 let g:loaded_matchit = 1
-let g:loaded_matchparen = 1
+"let g:loaded_matchparen = 1
 let g:loaded_2html_plugin = 1
 let g:loaded_logiPat = 1
 let g:loaded_rrhelper = 1
@@ -70,7 +70,14 @@ call utils#source_file($VIM_PATH,'core/color.vim')
 
 " Generate coc-settings.json
 call utils#generate_coc_json()
-
+colorscheme gruvbox
+:so /Users/max/.vim/custom/colors.vim
+:so /Users/max/.vim/custom/commands.vim
+:so /Users/max/.vim/custom/airline.vim
+let g:airline_theme='gruvbox'
 set secure
+
+
+
 
 " vim: set ts=2 sw=2 tw=80 noet :
