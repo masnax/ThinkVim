@@ -70,7 +70,8 @@ call utils#source_file($VIM_PATH,'core/color.vim')
 
 " Generate coc-settings.json
 call utils#generate_coc_json()
-colorscheme gruvbox
+colorscheme gruvbox9
+unmap ;
 :so /Users/max/.vim/custom/colors.vim
 :so /Users/max/.vim/custom/commands.vim
 :so /Users/max/.vim/custom/airline.vim

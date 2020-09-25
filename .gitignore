@@ -1,4 +1,4 @@
-dein/.DS_Store
+*.DS_Store
 colors/
 coc-settings.json
 tags
