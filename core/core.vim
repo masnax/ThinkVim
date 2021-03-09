@@ -70,12 +70,14 @@ call utils#source_file($VIM_PATH,'core/color.vim')
 
 " Generate coc-settings.json
 call utils#generate_coc_json()
-colorscheme gruvbox9
+"colorscheme gruvbox9
+colorscheme tangerine
 unmap ;
-:so /Users/max/.vim/custom/colors.vim
+":so /Users/max/.vim/custom/colors.vim
 :so /Users/max/.vim/custom/commands.vim
 :so /Users/max/.vim/custom/airline.vim
-let g:airline_theme='gruvbox'
+"let g:airline_theme='gruvbox'
+let g:airline_theme='atomic'
 set secure
 
 

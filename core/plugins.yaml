@@ -4,6 +4,8 @@
 
 # Editor UI{{{
 - repo: sainnhe/sonokai
+- repo: junegunn/goyo.vim
+  on_ft: md
 - repo: masnax/sunset-vim
 - repo: arcticicestudio/nord-vim
 - repo: vim-airline/vim-airline
