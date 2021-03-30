@@ -74,7 +74,25 @@ call utils#generate_coc_json()
 colorscheme tangerine
 unmap ;
 ":so /Users/max/.vim/custom/colors.vim
-:so /Users/max/.vim/custom/commands.vim
+" set laststatus=2
+set cursorline
+autocmd BufNewFile,BufRead *.ys set syntax=asm
+:command! WQ wq
+:command! Wq wq
+:command! W  w
+:command! Q  q
+":command Whitespace :%s/\s\+$//e
+":command Sync :syntax sync fromstart
+:noremap z( /(<CR> zfa) :noh<CR>
+:noremap z{ /{<CR> zfa} :noh<CR>
+"cnoreabbrev tree NERDTree
+:noremap ;; :NERDTree<CR>
+:noremap '' :Vista<CR>
+:noremap <tab><tab> <C-w>
+nmap  <C-M> <Plug>SearchantStop
+map <C-X> <Nop>
+unmap <C-X>
+
 :so /Users/max/.vim/custom/airline.vim
 "let g:airline_theme='gruvbox'
 let g:airline_theme='atomic'
