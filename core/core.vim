@@ -92,8 +92,30 @@ autocmd BufNewFile,BufRead *.ys set syntax=asm
 nmap  <C-M> <Plug>SearchantStop
 map <C-X> <Nop>
 unmap <C-X>
-
 :so /Users/max/.vim/custom/airline.vim
+:noremap << :vert res -40<CR>
+:noremap >> :vert res +40<CR>
+map ' <Nop>
+map ; <Nop>
+:noremap ;' :tabnext<CR>
+:noremap '; :tabprev<CR>
+
+nmap gd :call CocAction('jumpDefinition', 'tab drop')<CR>
+nmap <space><space> :call CocAction('jumpDefinition', 'tab drop')<CR>
+nmap <space>z :call CocActionAsync('jumpTypeDefinition', 'tab drop')<CR>
+nmap <space>x :call CocActionAsync('jumpImplementation', 'tab drop')<CR>
+nmap <space>c :call CocActionAsync('jumpReferences', 'tab drop')<CR>
+
+nmap gd :CocCommand git.chunkUndo<CR>
+nmap gu :CocCommand git.chunkUndo<CR>
+
+":set mmp=2000
+
+function! Start_New_Tab(path)
+	execute 'tabnew %:h/' . a:path
+endfunction
+:command! -nargs=1 TT :call Start_New_Tab(<f-args>)
+
 "let g:airline_theme='gruvbox'
 let g:airline_theme='atomic'
 set secure
