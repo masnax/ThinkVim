@@ -79,6 +79,7 @@ set cursorline
 autocmd BufNewFile,BufRead *.ys set syntax=asm
 :command! WQ wq
 :command! Wq wq
+:command! Qa qa
 :command! W  w
 :command! Q  q
 ":command Whitespace :%s/\s\+$//e
@@ -92,7 +93,6 @@ autocmd BufNewFile,BufRead *.ys set syntax=asm
 nmap  <C-M> <Plug>SearchantStop
 map <C-X> <Nop>
 unmap <C-X>
-:so /Users/max/.vim/custom/airline.vim
 :noremap << :vert res -40<CR>
 :noremap >> :vert res +40<CR>
 map ' <Nop>
@@ -106,16 +106,22 @@ nmap <space>z :call CocActionAsync('jumpTypeDefinition', 'tab drop')<CR>
 nmap <space>x :call CocActionAsync('jumpImplementation', 'tab drop')<CR>
 nmap <space>c :call CocActionAsync('jumpReferences', 'tab drop')<CR>
 
-nmap gd :CocCommand git.chunkUndo<CR>
+nmap gd :CocCommand git.chunkInfo<CR>
 nmap gu :CocCommand git.chunkUndo<CR>
-
-":set mmp=2000
+:set tw=120
+:set mmp=2000
 
 function! Start_New_Tab(path)
 	execute 'tabnew %:h/' . a:path
 endfunction
 :command! -nargs=1 TT :call Start_New_Tab(<f-args>)
 
+let g:airline_powerline_fonts = 1
+let g:airline_symbols_ascii = 1
+let g:airline_left_sep = " " "there's a space after this
+let g:airline_left_alt_sep = ' ' "there's a space after this
+let g:airline_right_sep = " " "there's a space before this
+let g:airline_right_alt_sep = ' ' "there's a space before this
 "let g:airline_theme='gruvbox'
 let g:airline_theme='atomic'
 set secure
