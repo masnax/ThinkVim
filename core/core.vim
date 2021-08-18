@@ -36,14 +36,14 @@ let g:loaded_netrw = 1
 let g:loaded_netrwPlugin = 1
 let g:loaded_netrwSettings = 1
 let g:loaded_netrwFileHandlers = 1
-
+map L <nop>
 " Initialize base requirements
 if has('vim_starting')
 	" Global Mappings "{{{
 	" Use spacebar as leader and ; as secondary-leader
 	" Required before loading plugins!
-	let g:mapleader="\<Space>"
-	let g:maplocalleader=';'
+	let g:mapleader="L"
+	let g:maplocalleader='L'
 
 	" Release keymappings prefixes, evict entirely for use of plug-ins.
 	nnoremap <Space>  <Nop>
@@ -101,10 +101,11 @@ map ; <Nop>
 :noremap '; :tabprev<CR>
 
 nmap gd :call CocAction('jumpDefinition', 'tab drop')<CR>
-nmap <space><space> :call CocAction('jumpDefinition', 'tab drop')<CR>
-nmap <space>z :call CocActionAsync('jumpTypeDefinition', 'tab drop')<CR>
-nmap <space>x :call CocActionAsync('jumpImplementation', 'tab drop')<CR>
-nmap <space>c :call CocActionAsync('jumpReferences', 'tab drop')<CR>
+nmap <space> :call CocAction('jumpDefinition', 'tab drop')<CR>
+nmap <space>x :call CocActionAsync('jumpTypeDefinition', 'tab drop')<CR>
+nmap <space><space><space> :call CocActionAsync('jumpImplementation', 'tab drop')<CR>
+nmap <space><space> :call CocActionAsync('jumpReferences', 'tab drop')<CR>
+nnoremap cc :echo join(reverse(map(synstack(line('.'), col('.')), 'synIDattr(v:val,"name")')),' ')<cr>
 
 nmap gd :CocCommand git.chunkInfo<CR>
 nmap gu :CocCommand git.chunkUndo<CR>
