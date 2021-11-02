@@ -117,6 +117,8 @@ function! Start_New_Tab(path)
 endfunction
 :command! -nargs=1 TT :call Start_New_Tab(<f-args>)
 
+:hi! link goFunctionCall TangerineBrightGreenBold
+
 let g:airline_powerline_fonts = 1
 let g:airline_symbols_ascii = 1
 let g:airline_left_sep = " " "there's a space after this
