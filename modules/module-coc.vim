@@ -43,13 +43,13 @@ let g:coc_global_extensions =[
     \ 'coc-gitignore',
     \ 'coc-yank',
     \ 'coc-explorer',
+    \ 'coc-git',
+    \ 'coc-highlight',
     \ 'coc-actions',
     \ 'coc-rust-analyzer',
     \ 'coc-rls'
     \]
 
-"    \ 'coc-git',
-"    \ 'coc-highlight',
 augroup MyAutoCmd
   autocmd!
   " Setup formatexpr specified filetype(s).
