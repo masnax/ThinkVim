@@ -1,0 +1,70 @@
+{
+	"suggest.triggerAfterInsertEnter": false,
+	"suggest.timeout": 500,
+	"suggest.noselect": false,
+	"suggest.detailField": "abbr",
+	"suggest.snippetIndicator": "🌟",
+	"suggest.triggerCompletionWait": 100,
+	"suggest.echodocSupport": true,
+	"suggest.completionItemKindLabels": {
+		"keyword": "keyword",
+		"variable": "var",
+		"value": "val",
+		"operator": "op",
+		"function": "func()",
+		"reference": "ref",
+		"constant": "const",
+		"method": "func()",
+		"struct": "struct{}",
+		"class": "class{}",
+		"interface": "iface{}",
+		"text": "txt",
+		"enum": "enum",
+		"enumMember": "enum*",
+		"module": "mod",
+		"color": "color",
+		"property": "prop",
+		"field": "Field:",
+		"unit": "unit",
+		"event": "event",
+		"file": "File",
+		"folder": "Folder",
+		"snippet": "Snippet",
+		"typeParameter": "Type",
+		"default": "?"
+	},
+	//diagnostic
+	"diagnostic.signOffset": 9999999,
+	"diagnostic.errorSign": "●",
+	"diagnostic.warningSign": "●",
+	"diagnostic.displayByAle": false,
+	"diagnostic.refreshOnInsertMode": true,
+	//git
+	"git.enableGutters": true,
+	"git.branchCharacter": "\uf418",
+	"git.addGBlameToBufferVar": true,
+	"git.addGBlameToVirtualText": true,
+	"git.virtualTextPrefix": " ❯❯❯ ",
+	"git.addedSign.hlGroup": "GitGutterAdd",
+	"git.changedSign.hlGroup": "GitGutterChange",
+	"git.removedSign.hlGroup": "GitGutterDelete",
+	"git.topRemovedSign.hlGroup": "GitGutterDelete",
+	"git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
+	"git.addedSign.text": "▎",
+	"git.changedSign.text": "▎",
+	"git.removedSign.text": "▏",
+	"git.topRemovedSign.text": "▔",
+	"git.changeRemovedSign.text": "▋",
+	"languageserver": {
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": [
+				"go.mod"
+			],
+			"disableWorkspaceFolders": true,
+			"filetypes": [
+				"go"
+			]
+		}
+	}
+}
