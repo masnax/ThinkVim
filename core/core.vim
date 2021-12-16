@@ -109,6 +109,7 @@ nnoremap cc :echo join(reverse(map(synstack(line('.'), col('.')), 'synIDattr(v:v
 
 nmap gd :CocCommand git.chunkInfo<CR>
 nmap gu :CocCommand git.chunkUndo<CR>
+nmap gs :CocCommand git.chunkStage<CR>
 :set tw=120
 :set mmp=2000
 
