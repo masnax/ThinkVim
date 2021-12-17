@@ -156,32 +156,6 @@ if dein#tap('vim-easy-align')
     nmap ga <Plug>(EasyAlign)
 endif
 
-if dein#tap('vim-go')
-	function! InitGoKeyMap() abort
-	 nnoremap <silent> <LocalLeader>ga :GoAddTags<CR>
-	 nnoremap <silent> <LocalLeader>gr :GoRemoveTags<CR>
-	 nnoremap <silent> <LocalLeader>gi :GoImpl<CR>
-	 nnoremap <silent> <LocalLeader>gd :GoDescribe<CR>
-	 nnoremap <silent> <LocalLeader>gc :GoCallees<CR>
-	 nnoremap <silent> <LocalLeader>gC :GoCallers<CR>
-	 nnoremap <silent> <LocalLeader>gs :GoCallstack<CR>
-	endfunction
-	autocmd FileType go call InitGoKeyMap()
-endif
-
-if dein#tap('vim-delve')
-	function! InitGoDebugKeyMap() abort
-		nnoremap <silent> <Leader>da :DlvToggleBreakpoint<CR>
-		nnoremap <silent> <Leader>db :DlvToggleTracepoint<CR>
-		nnoremap <silent> <Leader>dc :DlvClearAll<CR>
-		nnoremap <silent> <Leader>dd :DlvDebug<CR>
-		nnoremap <silent> <Leader>dt :DlvTest<CR>
-		nnoremap <silent> <Leader>dr :DlvRemoveBreakpoint<CR>
-		nnoremap <silent> <Leader>dR :DlvRemoveTracepoint<CR>
-	endfunction
-	autocmd FileType go call InitGoDebugKeyMap()
-endif
-
 
 if dein#tap('vimagit')
 	nnoremap <silent> <Leader>gg :Magit<CR>

@@ -20,34 +20,20 @@ let g:coc_snippet_prev = '<S-TAB>'
 let g:coc_status_error_sign = '•'
 let g:coc_status_warning_sign = '•'
 let g:coc_global_extensions =[
-    \ 'coc-html',
-    \ 'coc-css',
-    \ 'coc-tsserver',
     \ 'coc-vimlsp',
-    \ 'coc-vetur',
     \ 'coc-snippets',
     \ 'coc-prettier',
-    \ 'coc-tslint-plugin',
-    \ 'coc-eslint',
-    \ 'coc-emmet',
     \ 'coc-pairs',
     \ 'coc-json',
     \ 'coc-python',
-    \ 'coc-imselect',
-    \ 'coc-emoji',
     \ 'coc-project',
-    \ 'coc-lists',
-    \ 'coc-stylelint',
     \ 'coc-yaml',
     \ 'coc-tabnine',
     \ 'coc-gitignore',
     \ 'coc-yank',
-    \ 'coc-explorer',
     \ 'coc-git',
     \ 'coc-highlight',
     \ 'coc-actions',
-    \ 'coc-rust-analyzer',
-    \ 'coc-rls'
     \]
 
 augroup MyAutoCmd

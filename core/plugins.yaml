@@ -19,6 +19,15 @@
   build: 'yarn install --frozen-lockfile'
   hook_add: source  $VIM_PATH/modules/module-coc.vim
 
+- repo: liuchengxu/vim-clap
+  build: 'sh ./install.sh'
+  on_cmd: Clap
+  hook_source: source $VIM_PATH/modules/module-clap.vim
+
+- repo: honza/vim-snippets
+  depends: coc.nvim
+
+
 # }}}
 
 # Language{{{
@@ -27,11 +36,12 @@
 - repo: fatih/vim-go
   on_ft: [go,gomod]
   hook_source: |
-    let g:go_gopls_enabled = 0
+    let g:go_gopls_enabled = 1
     let g:go_code_completion_enabled = 0
     let g:go_doc_keywordprg_enabled = 0
     let g:go_def_mapping_enabled = 0
-    let g:go_mod_fmt_autosave = 0
+    let g:go_diagnostics_enabled = 0
+    let g:go_mod_fmt_autosave = 1
     let g:go_highlight_array_whitespace_error = 1
     let g:go_highlight_chan_whitespace_error = 1
     let g:go_highlight_space_tab_error = 0
@@ -105,3 +115,29 @@
 - repo: junegunn/Limelight.vim
   on_cmd: Limelight
 #}}}
+
+- repo: machakann/vim-sandwich
+  on_map: { vonx: <Plug>(operator-sandwich- }
+  hook_add: |
+    let g:sandwich_no_default_key_mappings = 1
+    let g:operator_sandwich_no_default_key_mappings = 1
+    let g:textobj_sandwich_no_default_key_mappings = 1
+
+- repo: tpope/vim-fugitive
+  on_cmd: [ G, Git, Gfetch, Gpush, Glog, Gclog, Gdiffsplit ]
+  hook_source:
+    augroup user_fugitive_plugin
+      autocmd!
+      autocmd FileType fugitiveblame normal A
+    augroup END
+
+- repo: easymotion/vim-easymotion
+  on_map: { n: <Plug> }
+  hook_source: |
+        let g:EasyMotion_do_mapping = 0
+        let g:EasyMotion_prompt = 'Jump to → '
+        let g:EasyMotion_keys = 'fjdkswbeoavn'
+        let g:EasyMotion_smartcase = 1
+        let g:EasyMotion_use_smartsign_us = 1
+# }}}
+
