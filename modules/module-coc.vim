@@ -28,7 +28,6 @@ let g:coc_global_extensions =[
     \ 'coc-python',
     \ 'coc-project',
     \ 'coc-yaml',
-    \ 'coc-tabnine',
     \ 'coc-gitignore',
     \ 'coc-yank',
     \ 'coc-git',

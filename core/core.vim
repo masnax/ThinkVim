@@ -112,6 +112,8 @@ nmap gu :CocCommand git.chunkUndo<CR>
 nmap gs :CocCommand git.chunkStage<CR>
 :set tw=120
 :set mmp=2000
+:set clipboard=unnamed
+:set mouse=a
 
 function! Start_New_Tab(path)
 	execute 'tabnew %:h/' . a:path
